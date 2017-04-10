@@ -47,7 +47,7 @@ galaxy_info:
     - jessie
   #  - wheezy
 
-  galaxy_tags: ['hdidle', 'hd_idle']
+  galaxy_tags: []
     # List tags for your role here, one per line. A tag is
     # a keyword that describes and categorizes the role.
     # Users find roles by searching for tags. Be sure to
