@@ -1,0 +1,7 @@
+---
+# defaults file for hd-idle
+
+hd_idle_version: 1.05
+hd_idle_compile_dir: /tmp/hd_idle
+hd_idle_checksum: "sha1:fafa454effc4c06eab33e08edf23c24b8ea57acb"
+hd_idle_url: http://sourceforge.net/projects/hd-idle/files/hd-idle-{{ hd_idle_version }}.tgz

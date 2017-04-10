@@ -1,0 +1,4 @@
+---
+# handlers file for hd-idle
+- name: restart hd-idle
+  service: name=hd-idle state=restarted
