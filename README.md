@@ -7,6 +7,7 @@ Requirements
 ------------
 
 Operating system support for /proc/diskstats, Debian compatibility.
+Tested with Ansible 2.1, 2.2, 2.3
 
 Role Variables
 --------------
@@ -37,6 +38,18 @@ Example Playbook
     - hosts: raspberrypis
       roles:
          - { role: hd-idle }
+
+Changelog
+---------
+
+### 1.1
+
+* added test for ansible 2.3
+* fixed deprecation warnings in ansible 2.3
+
+### 1.0
+
+* initial release
 
 License
 -------
