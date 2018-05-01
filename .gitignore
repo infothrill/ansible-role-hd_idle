@@ -2,3 +2,4 @@
 .vagrant
 .molecule
 .cache
+.pytest_cache

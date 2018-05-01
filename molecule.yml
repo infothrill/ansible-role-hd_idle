@@ -9,8 +9,8 @@ driver:
   name: vagrant
 vagrant:
   platforms:
-    - name: jessie87
-      box: bento/debian-8.7
+    - name: jessie-8.10
+      box: bento/debian-8.10
 # doesn't work https://github.com/metacloud/molecule/issues/199
 #    - name: wheezy711
 #      box: bento/debian-7.11
