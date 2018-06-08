@@ -7,6 +7,7 @@
   register: _proc_diskstats
 
 - name: system compatibility assertion
-  assert: { that: "_proc_diskstats is defined" }
+  assert:
+    that: "_proc_diskstats is defined"
 
 - include: hd_idle.yml

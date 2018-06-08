@@ -7,7 +7,6 @@ Requirements
 ------------
 
 Operating system support for /proc/diskstats, Debian compatibility.
-Tested with Ansible 2.1, 2.2, 2.3
 
 Role Variables
 --------------
@@ -42,6 +41,13 @@ Example Playbook
 Changelog
 ---------
 
+### 1.2
+
+* added test for ansible 2.4, 2.5
+* dropped support for ansible 2.1
+* upgraded molecule to 2.15
+* added test for debian stratch 9.4
+
 ### 1.1
 
 * added test for ansible 2.3
@@ -54,7 +60,7 @@ Changelog
 License
 -------
 
-MIT / BSD
+MIT
 
 Author Information
 ------------------
