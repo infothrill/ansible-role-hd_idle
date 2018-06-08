@@ -1,6 +1,6 @@
 ---
 # Pyup configuration
-branch: 'develop'
+branch: 'master'
 
 requirements:
   - 'requirements.txt'
