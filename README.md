@@ -1,6 +1,11 @@
 Ansible role: hd-idle
 =====================
 
+[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd-idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd-idle)
+[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/)
+[![Ansible Role](https://img.shields.io/ansible/role/27484.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
+
+
 Install [hd-idle](http://hd-idle.sourceforge.net/) from source.
 
 Requirements
@@ -13,16 +18,16 @@ Role Variables
 
 Available variables are listed below, along with default values (see defaults/main.yml):
 
-	hd_idle_version: 1.05
+    hd_idle_version: 1.05
 
 The version to install. If changed, `hd_idle_checksum` also needs to be adapted.
 
-	hd_idle_checksum: sha256:4efefe79d145b50e055582730d9d685e485da3df3dad90fef030036d52aa3a0c
+    hd_idle_checksum: sha256:4efefe79d145b50e055582730d9d685e485da3df3dad90fef030036d52aa3a0c
 
 The checksum. We do this to enable trust in the downloaded code as well as enabling
-downloads without https cert verification (which is problematic on old python installs).	
+downloads without https cert verification (which is problematic on old python installs).
 
-	hd_idle_compile_dir: /tmp/hd_idle
+    hd_idle_compile_dir: /tmp/hd_idle
 
 The directory to use for compilation purposes.
 
@@ -36,10 +41,14 @@ Example Playbook
 
     - hosts: raspberrypis
       roles:
-         - { role: hd-idle }
+         - { role: infothrill.hd-idle }
 
 Changelog
 ---------
+
+### 1.4 (unreleased)
+
+* added basic lint/syntax test using travis
 
 ### 1.3
 
