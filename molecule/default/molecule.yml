@@ -10,11 +10,11 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: debian-stretch-9.4
-    box: bento/debian-9.4
+  - name: debian-stretch-9
+    box: bento/debian-9
     memory: 512
-  - name: debian-jessie-8.10
-    box: bento/debian-8.10
+  - name: debian-jessie-8
+    box: bento/debian-8
     memory: 512
 provisioner:
   name: ansible
