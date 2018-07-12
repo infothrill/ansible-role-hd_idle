@@ -3,7 +3,7 @@ Ansible role: hd-idle
 
 [![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd-idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd-idle)
 [![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/)
-[![Ansible Role](https://img.shields.io/ansible/role/27484.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
+[![Ansible Role](https://img.shields.io/ansible/role/27475.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
 
 Install [hd-idle](http://hd-idle.sourceforge.net/) from source.
