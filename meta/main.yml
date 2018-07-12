@@ -14,6 +14,9 @@ galaxy_info:
         - stretch
 
   galaxy_tags:
-    - hd-idle
+    - hdidle
+    - idle
+    - hd
+    - powersave
 
 dependencies: []
