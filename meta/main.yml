@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: hd-idle
   author: Paul Kremer
   description: deploy and install hd-idle
 

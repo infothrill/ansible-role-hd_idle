@@ -41,12 +41,16 @@ Example Playbook
 Changelog
 ---------
 
+### 1.3
+
+* added test for ansible 2.6
+
 ### 1.2
 
 * added test for ansible 2.4, 2.5
 * dropped support for ansible 2.1
 * upgraded molecule to 2.15
-* added test for debian stratch 9.4
+* added test for debian stretch 9.4
 
 ### 1.1
 
