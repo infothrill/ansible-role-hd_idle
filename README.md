@@ -1,20 +1,17 @@
-Ansible role: hd-idle
-=====================
+# Ansible role: hd_idle
 
-[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd-idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd-idle)
-[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd-idle/)
+[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
+[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/)
 [![Ansible Role](https://img.shields.io/ansible/role/27475.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
 
-Install [hd-idle](http://hd-idle.sourceforge.net/) from source.
+Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This program is useful to spin down harddrives after a given timeout of inactivity. This can save power and maybe extend the lifespan of the spinning disk.
 
-Requirements
-------------
+## Requirements
 
 Operating system support for /proc/diskstats, Debian compatibility.
 
-Role Variables
---------------
+## Role Variables
 
 Available variables are listed below, along with default values (see defaults/main.yml):
 
@@ -31,24 +28,22 @@ downloads without https cert verification (which is problematic on old python in
 
 The directory to use for compilation purposes.
 
-Dependencies
-------------
+## Dependencies
 
 None.
 
-Example Playbook
-----------------
+## Example Playbook
 
     - hosts: raspberrypis
       roles:
-         - { role: infothrill.hd-idle }
+         - { role: infothrill.hd_idle }
 
-Changelog
----------
+## Changelog
 
 ### 1.4 (unreleased)
 
 * added basic lint/syntax test using travis
+* renamed role to `hd_idle` (from `hd-idle`)
 
 ### 1.3
 
@@ -70,12 +65,10 @@ Changelog
 
 * initial release
 
-License
--------
+## License
 
 MIT
 
-Author Information
-------------------
+## Author Information
 
 This role was created in 2017 by Paul Kremer.
