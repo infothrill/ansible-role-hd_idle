@@ -56,6 +56,11 @@ None.
 * upgraded molecule to 2.15
 * added test for debian stretch 9.4
 
+### 1.2
+
+* upgraded molecule
+* fixed molecule paybook
+
 ### 1.1
 
 * added test for ansible 2.3

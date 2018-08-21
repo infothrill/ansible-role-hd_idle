@@ -3,5 +3,7 @@
   hosts: all
   gather_facts: false
   become: true
+  vars:
+    bootstrap_wait_for_host: false
   roles:
     - role: robertdebock.bootstrap

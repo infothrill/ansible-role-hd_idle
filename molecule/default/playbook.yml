@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    - role: ansible-role-hd-idle
+    - role: ansible-role-hd_idle
