@@ -40,7 +40,7 @@ None.
 
 ## Changelog
 
-### 1.4 (unreleased)
+### 1.4
 
 * added basic lint/syntax test using travis
 * renamed role to `hd_idle` (from `hd-idle`)
