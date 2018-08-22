@@ -2,6 +2,7 @@
 galaxy_info:
   author: Paul Kremer
   description: deploy and install hd-idle
+  role_name: hd_idle
 
   license: MIT
 
