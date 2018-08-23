@@ -39,7 +39,7 @@ None.
 
 ## Changelog
 
-### 1.4
+### 1.4.0
 
 * added basic lint/syntax test using travis
 * renamed role to `hd_idle` (from `hd-idle`)
@@ -48,24 +48,24 @@ None.
 
 * added test for ansible 2.6
 
-### 1.2
+### 1.2.0
 
 * added test for ansible 2.4, 2.5
 * dropped support for ansible 2.1
 * upgraded molecule to 2.15
 * added test for debian stretch 9.4
 
-### 1.2
+### 1.2.0
 
 * upgraded molecule
 * fixed molecule paybook
 
-### 1.1
+### 1.1.0
 
 * added test for ansible 2.3
 * fixed deprecation warnings in ansible 2.3
 
-### 1.0
+### 1.0.0
 
 * initial release
 
