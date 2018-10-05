@@ -9,14 +9,15 @@
 
 - name: "install compilation and support packages for hd_idle"
   apt:
-    name: "{{ item }}"
+    name: "{{ packages }}"
     state: present
     update_cache: true
     cache_valid_time: 28800
-  with_items:
-    - build-essential
-    - fakeroot
-    - debhelper
+  vars:
+    packages:
+      - build-essential
+      - fakeroot
+      - debhelper
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: "compile dir"
