@@ -29,27 +29,27 @@
 - name: Download hd-idle source
   get_url:
     url: "{{ hd_idle_url }}"
-    dest: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
+    dest: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
     checksum: "{{ hd_idle_checksum }}"
     validate_certs: false  # we validate the checksum and stay compatible with old python versions
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Unpack hd-idle source
   unarchive:
-    src: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
-    dest: "{{ hd_idle_compile_dir }}"
-    creates: "{{ hd_idle_compile_dir }}/hd-idle"
+    src: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
+    dest: "{{ hd_idle_compile_dir }}"
+    creates: "{{ hd_idle_compile_dir }}/hd-idle"
     copy: false
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Compile hd-idle source
-  command: chdir={{ hd_idle_compile_dir }}/hd-idle {{ item }}
+  command: chdir={{ hd_idle_compile_dir }}/hd-idle {{ item }}
   with_items:
     - dpkg-buildpackage -rfakeroot
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Install hd-idle
-  shell: chdir={{ hd_idle_compile_dir }} {{ item }}
+  shell: chdir={{ hd_idle_compile_dir }} {{ item }}
   with_items:
     - "dpkg -i hd-idle_{{ hd_idle_version }}_*.deb"  # wildcard ignores platform part, causes shell above
   when: hd_idle_detected_version.stdout != hd_idle_version|string
