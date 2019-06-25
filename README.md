@@ -1,6 +1,7 @@
 # Ansible role: hd_idle
 
 [![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
+[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/develop.svg?label=travis_develop)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
 [![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/)
 [![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
@@ -38,6 +39,11 @@ None.
          - { role: infothrill.hd_idle }
 
 ## Changelog
+
+### 1.4.1
+
+* added testing for ansible 2.8
+* added experimental test for debian buster
 
 ### 1.4.0
 
