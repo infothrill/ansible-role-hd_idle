@@ -11,7 +11,7 @@ lint:
   name: yamllint
 platforms:
   - name: debian-buster-10
-    box: aalmenar/debian-10  # TODO: switch to bento when released
+    box: bento/debian-10
     memory: 512
   - name: debian-stretch-9
     box: bento/debian-9
