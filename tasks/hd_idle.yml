@@ -32,6 +32,7 @@
     dest: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
     checksum: "{{ hd_idle_checksum }}"
     validate_certs: false  # we validate the checksum and stay compatible with old python versions
+    timeout: 60  # bump up from default 10s
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Unpack hd-idle source
@@ -40,6 +41,8 @@
     dest: "{{ hd_idle_compile_dir }}"
     creates: "{{ hd_idle_compile_dir }}/hd-idle"
     copy: false
+    owner: root  # explicitly make root the owner of unpacked files
+    group: root
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Compile hd-idle source
