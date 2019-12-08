@@ -40,6 +40,13 @@ None.
 
 ## Changelog
 
+### 2.0.0
+
+* dropped support for ansible 2.4
+* added support for ansible 2.8
+* switched testing toolchain to python 3.6
+* upgraded molecule and ansible-lint
+
 ### 1.4.1
 
 * added testing for ansible 2.8
