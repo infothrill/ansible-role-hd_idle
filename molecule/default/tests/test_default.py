@@ -17,7 +17,7 @@ def test_hosts_file(host):
 
 def test_packages(host):
     assert host.package('hd-idle').is_installed
-    assert host.package('hd-idle').version.startswith("1.05")
+    assert host.package('hd-idle').version.startswith('1.05')
 
 
 def test_service(host):
