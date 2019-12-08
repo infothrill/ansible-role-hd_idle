@@ -40,6 +40,11 @@ None.
 
 ## Changelog
 
+### 2.0.1
+
+* increase timeout for download to 60 sec
+* explicitly set owner of unpacked source code to `root`
+
 ### 2.0.0
 
 * dropped support for ansible 2.4
