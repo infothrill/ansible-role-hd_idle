@@ -12,6 +12,7 @@ env:
   - ANSIBLE="2.7"
   - ANSIBLE="2.8"
   - ANSIBLE="2.9"
+  - ANSIBLE="2.10"
 install: pip install tox-travis
 script: tox
 
