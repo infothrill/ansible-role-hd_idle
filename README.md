@@ -40,6 +40,10 @@ None.
 
 ## Changelog
 
+### x
+
+* Upgrade molecule to 3.x
+
 ### 2.0.1
 
 * increase timeout for download to 60 sec
