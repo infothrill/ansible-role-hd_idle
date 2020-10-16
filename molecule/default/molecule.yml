@@ -8,8 +8,9 @@ driver:
   provider:
     name: virtualbox
 lint: |
+  pwd
   yamllint .
-  ansible-lint
+  ansible-lint --exclude molecule
 platforms:
   - name: debian-buster-10
     box: bento/debian-10

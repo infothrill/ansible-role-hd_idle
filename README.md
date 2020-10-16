@@ -42,7 +42,8 @@ None.
 
 ### x
 
-* Upgrade molecule to 3.x
+* Upgrade molecule to 3.0.x
+* added support for ansible 2.10
 
 ### 2.0.1
 
