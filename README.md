@@ -42,6 +42,7 @@ None.
 
 ### x
 
+* Drop support for ansible < 2.8
 * Upgrade molecule to 3.0.x
 * added support for ansible 2.10
 
