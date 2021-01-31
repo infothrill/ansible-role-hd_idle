@@ -1,5 +1,5 @@
 ansible-lint==4.3.7
-molecule==3.2.2
+molecule==3.2.3
 molecule-vagrant==0.6.1
 python-vagrant==0.5.15
 testinfra>=3.0.4
