@@ -42,9 +42,9 @@ None.
 
 ### x
 
-* Drop support for ansible < 2.8
+* Drop support for ansible < 2.9
 * Upgrade molecule to 3.0.x
-* added support for ansible 2.10
+* added support for ansible 2.10, 3.0
 * add support for python 3.7+
 
 ### 2.0.1
