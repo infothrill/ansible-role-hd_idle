@@ -3,10 +3,11 @@ galaxy_info:
   author: Paul Kremer
   description: deploy and install hd-idle
   role_name: hd_idle
+  namespace: infothrill
 
   license: MIT
 
-  min_ansible_version: 2.5
+  min_ansible_version: 2.9
 
   platforms:
     - name: Debian
