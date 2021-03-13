@@ -40,7 +40,7 @@ None.
 
 ## Changelog
 
-### x
+### 2.0.2
 
 * Drop support for ansible < 2.9
 * Upgrade molecule to 3.0.x
