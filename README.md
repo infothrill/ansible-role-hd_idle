@@ -40,6 +40,13 @@ None.
 
 ## Changelog
 
+### 2.0.2
+
+* Drop support for ansible < 2.9
+* Upgrade molecule to 3.0.x
+* added support for ansible 2.10, 3.0
+* add support for python 3.7+
+
 ### 2.0.1
 
 * increase timeout for download to 60 sec
