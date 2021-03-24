@@ -3,3 +3,4 @@ molecule==3.2.4
 molecule-vagrant==0.6.1
 python-vagrant==0.5.15
 testinfra>=3.0.4
+yamllint>=1.26.0
