@@ -1,8 +1,6 @@
 # Ansible role: hd_idle
 
-[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
-[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/develop.svg?label=travis_develop)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
-[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/)
+![Build status](https://github.com/infothrill/ansible-role-hd_idle/actions/workflows/tests.yml/badge.svg)
 [![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
 Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This program is useful to spin down harddrives after a given timeout of inactivity. This can save power and maybe extend the lifespan of the spinning disk.
@@ -39,6 +37,12 @@ None.
          - { role: infothrill.hd_idle }
 
 ## Changelog
+
+### 2.x
+* Drop support for ansible < 2.10
+* Drop support for python < 3.8
+* Switch to Github Actions for CI
+
 
 ### 2.0.2
 
