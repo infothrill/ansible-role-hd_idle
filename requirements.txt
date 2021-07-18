@@ -1,6 +1,6 @@
 ansible-lint==5.0.12
 molecule==3.3.4
-molecule-vagrant==0.6.1
+molecule-vagrant==0.6.3
 python-vagrant==0.5.15
 testinfra>=3.0.4
 yamllint>=1.26.0
