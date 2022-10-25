@@ -40,15 +40,16 @@ None.
 
 ## Changelog
 
-### 2.x
+### 2.1.0
 
-* Drop support for ansible < 5
-* Drop support for python < 3.8
+* Code linted to modern standards and minor security risks adressed (file permissions)
+* Drop support for ansible older than 5
+* Drop support for python older than 3.8
 * Switch to Github Actions for CI
 
 ### 2.0.2
 
-* Drop support for ansible < 2.9
+* Drop support for ansible older than 2.9
 * Upgrade molecule to 3.0.x
 * added support for ansible 2.10, 3.0
 * add support for python 3.7+
