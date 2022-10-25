@@ -1,14 +1,14 @@
 ---
 # http://www.htpcguides.com/spin-down-and-manage-hard-drive-power-on-raspberry-pi/
 
-- name: get currently installed hd-idle version
-  shell: "dpkg-query --showformat='${Version}' --show hd-idle || true"
+- name: Get currently installed hd-idle version
+  ansible.builtin.shell: "dpkg-query --showformat='${Version}' --show hd-idle || true"
   register: hd_idle_detected_version
   ignore_errors: true
   changed_when: false
 
-- name: "install compilation and support packages for hd_idle"
-  apt:
+- name: "Install compilation and support packages for hd_idle"
+  ansible.builtin.apt:
     name: "{{ packages }}"
     state: present
     update_cache: true
@@ -20,24 +20,25 @@
       - debhelper
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
-- name: "compile dir"
-  file:
+- name: "Create compile dir"
+  ansible.builtin.file:
     path: "{{ hd_idle_compile_dir }}"
     state: directory
     mode: '750'
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Download hd-idle source
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ hd_idle_url }}"
     dest: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
     checksum: "{{ hd_idle_checksum }}"
     validate_certs: false  # we validate the checksum and stay compatible with old python versions
     timeout: 60  # bump up from default 10s
+    mode: '0640'
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Unpack hd-idle source
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ hd_idle_compile_dir }}/hd-idle-{{ hd_idle_version }}.tgz"
     dest: "{{ hd_idle_compile_dir }}"
     creates: "{{ hd_idle_compile_dir }}/hd-idle"
@@ -48,21 +49,23 @@
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Compile hd-idle source
-  command: chdir={{ hd_idle_compile_dir }}/hd-idle {{ item }}
+  ansible.builtin.command: "{{ item }}"
+  args:
+    chdir: "{{ hd_idle_compile_dir }}/hd-idle"
   with_items:
     - dpkg-buildpackage -rfakeroot
   when: hd_idle_detected_version.stdout != hd_idle_version|string
 
 - name: Install hd-idle
-  shell: chdir={{ hd_idle_compile_dir }} {{ item }}
+  ansible.builtin.shell: chdir={{ hd_idle_compile_dir }} {{ item }}
   with_items:
     - "dpkg -i hd-idle_{{ hd_idle_version }}_*.deb"  # wildcard ignores platform part, causes shell above
   when: hd_idle_detected_version.stdout != hd_idle_version|string
   tags:
     - skip_ansible_lint
 
-- name: "enable default startup of hd-idle"
-  lineinfile:
+- name: "Enable default startup of hd-idle"
+  ansible.builtin.lineinfile:
     dest: /etc/default/hd-idle
     create: true
     state: present
@@ -71,8 +74,8 @@
     mode: '644'
   notify: "restart hd-idle"
 
-- name: "set default options of hd-idle"
-  lineinfile:
+- name: "Set default options of hd-idle"
+  ansible.builtin.lineinfile:
     dest: /etc/default/hd-idle
     create: true
     state: present
@@ -81,8 +84,8 @@
     mode: '644'
   notify: "restart hd-idle"
 
-- name: restart hd-idle
-  service:
+- name: Restart hd-idle
+  ansible.builtin.service:
     name: hd-idle
     state: restarted
     enabled: true

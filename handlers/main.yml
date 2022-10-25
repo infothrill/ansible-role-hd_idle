@@ -1,4 +1,6 @@
 ---
 # handlers file for hd-idle
-- name: restart hd-idle
-  service: name=hd-idle state=restarted
+- name: restart hd-idle  # noqa name[casing]
+  ansible.builtin.service:
+    name: hd-idle
+    state: restarted

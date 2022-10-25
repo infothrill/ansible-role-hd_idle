@@ -1,11 +1,11 @@
 # Ansible role: hd_idle
 
-[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
-[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-hd_idle/develop.svg?label=travis_develop)](https://travis-ci.org/infothrill/ansible-role-hd_idle)
-[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-hd_idle/)
+![Build status](https://github.com/infothrill/ansible-role-hd_idle/actions/workflows/tests.yml/badge.svg)
 [![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
-Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This program is useful to spin down harddrives after a given timeout of inactivity. This can save power and maybe extend the lifespan of the spinning disk.
+Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This
+program is useful to spin down harddrives after a given timeout of
+inactivity. This can save power and maybe extend the lifespan of the spinning disk.
 
 ## Requirements
 
@@ -40,9 +40,16 @@ None.
 
 ## Changelog
 
+### 2.1.0
+
+* Code linted to modern standards and minor security risks adressed (file permissions)
+* Drop support for ansible older than 5
+* Drop support for python older than 3.8
+* Switch to Github Actions for CI
+
 ### 2.0.2
 
-* Drop support for ansible < 2.9
+* Drop support for ansible older than 2.9
 * Upgrade molecule to 3.0.x
 * added support for ansible 2.10, 3.0
 * add support for python 3.7+

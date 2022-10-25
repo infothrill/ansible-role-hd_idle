@@ -5,5 +5,7 @@ rules:
   line-length: disable
 
 ignore: |
+  .github
   .tox
+  .cache
   molecule
