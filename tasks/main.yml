@@ -1,13 +1,14 @@
 ---
 # tasks file for hd-idle
 
-- name: "detect /proc/diskstats and decide wether we can install hd-idle"
-  stat:
+- name: "Detect /proc/diskstats and decide wether we can install hd-idle"
+  ansible.builtin.stat:
     path: /proc/diskstats
   register: _proc_diskstats
 
-- name: system compatibility assertion
-  assert:
+- name: "Make a system compatibility assertion"
+  ansible.builtin.assert:
     that: "_proc_diskstats is defined"
 
-- include: hd_idle.yml
+- name: "Include installation tasks"
+  ansible.builtin.include_tasks: hd_idle.yml

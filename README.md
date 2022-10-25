@@ -3,7 +3,9 @@
 ![Build status](https://github.com/infothrill/ansible-role-hd_idle/actions/workflows/tests.yml/badge.svg)
 [![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
-Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This program is useful to spin down harddrives after a given timeout of inactivity. This can save power and maybe extend the lifespan of the spinning disk.
+Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This
+program is useful to spin down harddrives after a given timeout of
+inactivity. This can save power and maybe extend the lifespan of the spinning disk.
 
 ## Requirements
 
@@ -39,10 +41,10 @@ None.
 ## Changelog
 
 ### 2.x
-* Drop support for ansible < 2.10
+
+* Drop support for ansible < 5
 * Drop support for python < 3.8
 * Switch to Github Actions for CI
-
 
 ### 2.0.2
 

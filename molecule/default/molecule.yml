@@ -12,6 +12,9 @@ lint: |
   yamllint .
   ansible-lint --exclude molecule
 platforms:
+  - name: debian-bullseye-11
+    box: bento/debian-11
+    memory: 512
   - name: debian-buster-10
     box: bento/debian-10
     memory: 512
