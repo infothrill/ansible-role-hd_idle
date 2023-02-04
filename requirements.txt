@@ -1,4 +1,4 @@
-ansible-lint==6.11.0
+ansible-lint==6.12.1
 molecule==4.0.4
 molecule-vagrant==2.0.0
 python-vagrant==1.0.0
