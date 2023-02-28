@@ -55,6 +55,7 @@
   with_items:
     - dpkg-buildpackage -rfakeroot
   when: hd_idle_detected_version.stdout != hd_idle_version|string
+  changed_when: true
 
 - name: Install hd-idle
   ansible.builtin.shell: chdir={{ hd_idle_compile_dir }} {{ item }}
