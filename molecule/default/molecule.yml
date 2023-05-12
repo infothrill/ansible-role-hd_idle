@@ -18,12 +18,6 @@ platforms:
   - name: debian-buster-10
     box: bento/debian-10
     memory: 512
-  - name: debian-stretch-9
-    box: bento/debian-9
-    memory: 512
-  - name: debian-jessie-8
-    box: bento/debian-8
-    memory: 512
 provisioner:
   name: ansible
 scenario:
