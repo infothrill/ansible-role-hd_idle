@@ -1,7 +1,7 @@
 # Ansible role: hd_idle
 
 ![Build status](https://github.com/infothrill/ansible-role-hd_idle/actions/workflows/tests.yml/badge.svg)
-[![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
+[![Ansible Role](https://img.shields.io/ansible/role/d/infothrill/hd_idle)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
 Installs [hd-idle](http://hd-idle.sourceforge.net/) on Debian systems.
 For Debian releases >= 11 (Bullseye), installs the shipped `hd-idle` package, for older
