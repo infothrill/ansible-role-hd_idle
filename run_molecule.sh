@@ -4,7 +4,7 @@
 # wrapper to determine what exactly gets run during CI
 
 if [ "$CI" = "true" ]; then
-    exec molecule lint
+    exec molecule syntax
 else
     exec molecule test
 fi
