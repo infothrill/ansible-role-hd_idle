@@ -3,8 +3,10 @@
 ![Build status](https://github.com/infothrill/ansible-role-hd_idle/actions/workflows/tests.yml/badge.svg)
 [![Ansible Role](https://img.shields.io/ansible/role/29102.svg)](https://galaxy.ansible.com/infothrill/hd_idle/)
 
-Install [hd-idle](http://hd-idle.sourceforge.net/) from source. This
-program is useful to spin down harddrives after a given timeout of
+Installs [hd-idle](http://hd-idle.sourceforge.net/) on Debian systems.
+For Debian releases >= 11 (Bullseye), installs the shipped `hd-idle` package, for older
+distro versions, installs from source.
+About `hd-idle`: This program is useful to spin down harddrives after a given timeout of
 inactivity. This can save power and maybe extend the lifespan of the spinning disk.
 
 ## Requirements
@@ -40,12 +42,15 @@ None.
 
 ## Changelog
 
+### 2.2.0
+* Add support for installing shipped distro package, leaving only minimal config tasks.
+
 ### 2.1.0
 
 * Code linted to modern standards and minor security risks adressed (file permissions)
 * Drop support for ansible older than 5
 * Drop support for python older than 3.8
-* Switch to Github Actions for CI
+* Switch to GitHub Actions for CI
 
 ### 2.0.2
 
