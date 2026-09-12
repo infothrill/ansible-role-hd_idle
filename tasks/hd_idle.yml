@@ -5,6 +5,12 @@
   ansible.builtin.include_tasks: from_source.yml
   when: ansible_facts["distribution"] == 'Debian' and ansible_facts["distribution_major_version"]|int < 11  # < bullseye
 
+- name: "Install from apt"
+  ansible.builtin.apt:
+    name: "hd-idle"
+    state: present
+  when: ansible_facts["distribution"] == 'Debian' and ansible_facts["distribution_major_version"]|int >= 11  # >= bullseye
+
 - name: "Enable default startup of hd-idle"
   ansible.builtin.lineinfile:
     dest: /etc/default/hd-idle
